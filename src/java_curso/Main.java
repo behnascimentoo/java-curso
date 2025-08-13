@@ -84,6 +84,16 @@ public class Main {
         //Polimorfismo
         Carro meuCarro = new Sandero();
         meuCarro.acelerar();
+
+        // Tratamento de exceções
+        Carro meuErroFurado = null;
+
+        try {
+            meuErroFurado.acelerar();
+        } catch (NullPointerException exception) {
+            System.out.println("vende carro furado");
         }
+
     }
+}
 
