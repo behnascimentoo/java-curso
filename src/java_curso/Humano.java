@@ -7,4 +7,7 @@ public class Humano extends SerVivo {
         this.nome = "be";
     }
 
+    public void respirar() {
+        System.out.println("Inalando e exalando CO2 e Oxigenio");
+    }
 }

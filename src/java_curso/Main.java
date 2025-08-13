@@ -80,6 +80,10 @@ public class Main {
         // Herança
         SerVivo meuSer = new Humano();
         meuSer.respirar();
+
+        //Polimorfismo
+        Carro meuCarro = new Sandero();
+        meuCarro.acelerar();
         }
     }
 
