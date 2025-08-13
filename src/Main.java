@@ -1,13 +1,13 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
+        // Tipos primitivos e variaveis
         byte b = 100;
         boolean bool = false;
         String str = "Be";
 
-        int[] colecaoDeInteiros= {1, 2, 3, 4, 5, 6666}; //cria um vetor ja com os valores declarados
-        int[] meusNumeros = new int[5]; //cria um vetor saber os valores de dentro, apenas com o tamanho
-
-
+        //Condicionais
         if (str.isBlank()) {
             System.out.println("True");
         } else if (str == "Be"){
@@ -16,7 +16,24 @@ public class Main {
             System.out.println("False");
         }
 
+        // Vetores
+        int[] colecaoDeInteiros= {1, 2, 3, 4, 5, 6666}; //cria um vetor ja com os valores declarados
+        int[] meusNumeros = new int[5]; //cria um vetor saber os valores de dentro, apenas com o tamanho
         System.out.println(colecaoDeInteiros.length);
+
+        //Arrays List
+        ArrayList<String> nomes = new ArrayList<>();
+        nomes.add("be"); //pode ir add coisas na lista, não tem limite nem minimo
+        nomes.add("leo");
+        nomes.add("lua");
+
+        System.out.println(nomes.get(0)); //nomes.get(indice) o .get pega o valor da list pelo indice
+        System.out.println(nomes.toArray().length);
+        nomes.remove(0);
+        nomes.remove("leo");
+        System.out.println(nomes.get(0));
+
+        
     }
 
 }
