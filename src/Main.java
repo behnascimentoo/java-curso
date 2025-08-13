@@ -48,6 +48,18 @@ public class Main {
             System.out.println("Estou no while");
             contador++;
         }
+
+        // Castings (mudança de tipos)
+        double resultado = 0.0;
+        int resultadoInt = (int) resultado;
+
+        int meuInt = 10;
+        double meuDouble = meuInt;
+
+        String minhaString = "10";
+        int meuInt2 = Integer.parseInt(minhaString);
+
+        String meuString = String.valueOf(meuInt2);
     }
 
 }
