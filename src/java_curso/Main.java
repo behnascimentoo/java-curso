@@ -76,5 +76,10 @@ public class Main {
 
         sandero.acelerar();
         mobi.acelerar();
+
+        // Herança
+        SerVivo meuSer = new Humano();
+        meuSer.respirar();
+        }
     }
-}
+
