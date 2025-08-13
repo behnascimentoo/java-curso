@@ -60,6 +60,12 @@ public class Main {
         int meuInt2 = Integer.parseInt(minhaString);
 
         String meuString = String.valueOf(meuInt2);
-    }
 
+        // Classes, Objetos, Metodos Construtores
+        Carro meuCarro = new Carro("Sandero");
+        Carro meuCarro2 = new Carro("BMW");
+
+        meuCarro.acelerar();
+        meuCarro2.acelerar();
+    }
 }
