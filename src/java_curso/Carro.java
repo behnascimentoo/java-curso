@@ -1,3 +1,6 @@
+package java_curso;
+
+// public, private, protected, default
 public class Carro {
     public static void main(String[] args) {
         System.out.println("Teste");
@@ -7,7 +10,14 @@ public class Carro {
         this.modelo = modelo;
     }
 
-    public void acelerar() {
+    protected void acelerar() {
         System.out.println("Acelerando o carro " + this.modelo);
+    }
+
+    class Rodas {
+        public Rodas() {
+            Carro carro = new Carro("Celta");
+            carro.acelerar();
+        }
     }
 }
