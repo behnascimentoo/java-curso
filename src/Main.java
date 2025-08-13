@@ -26,14 +26,28 @@ public class Main {
         nomes.add("be"); //pode ir add coisas na lista, não tem limite nem minimo
         nomes.add("leo");
         nomes.add("lua");
+        nomes.add("madu");
 
         System.out.println(nomes.get(0)); //nomes.get(indice) o .get pega o valor da list pelo indice
-        System.out.println(nomes.toArray().length);
+        System.out.println(nomes.size());
         nomes.remove(0);
         nomes.remove("leo");
         System.out.println(nomes.get(0));
 
-        
+        //Loops (for and while)
+        for(int meuInterador = 0; meuInterador < nomes.size(); meuInterador++){
+            System.out.println(nomes.get(meuInterador));
+        }
+
+        for (String nome : nomes){
+            System.out.println(nome);
+        }
+
+        int contador = 0;
+        while (contador < 10) {
+            System.out.println("Estou no while");
+            contador++;
+        }
     }
 
 }
