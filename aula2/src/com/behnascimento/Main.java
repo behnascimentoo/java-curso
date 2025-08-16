@@ -3,14 +3,16 @@ package com.behnascimento;
 import com.behnascimento.carro.Carro2;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
         //list - permite duplicadas
         List<String>  list = new ArrayList<>();
-        list.add("be");
+        list.add("be guedes");
         list.add("fe");
         list.add("hi");
+        list.add("be nascimento");
         list.add("be");
 
         System.out.println("List: " + list);
@@ -20,7 +22,8 @@ public class Main {
         setStrings.add("hello");
         setStrings.add("be");
         setStrings.add("fe");
-        setStrings.add("be");
+        setStrings.add("beh");
+
 
         System.out.println("Set: " + setStrings.contains("be"));
         //contains() verifica se tem o valor
@@ -54,6 +57,18 @@ public class Main {
         Carro2 sandero = new Carro2("sandero", "preto", 2020, "ABC-1234");
         System.out.println(sandero.ano());
 
+        // STREAM API
+        // realizar operações funcionais nas nossa colletions (estruturas de dados)
+        // filter, map, reduce, agreçações
+        // filter - filtra os elementos de uma coleção
+        // map - transforma os elementos de um coleção
+        //reduce - reduz os elementos de uma coleção a um único elemento
+        // agregações - soma, média, contagem, etc
 
+        //filtra a list e pega todas as be e coloca dentro de outra lista chamada bes
+        Set<String> bes = list.stream().filter(nome -> nome.startsWith("be"))
+                .map(String::toUpperCase)
+                .map(nome -> nome.replaceAll(" ", "")).collect(Collectors.toSet());
+        System.out.println("bes: " + bes);
     }
 }
