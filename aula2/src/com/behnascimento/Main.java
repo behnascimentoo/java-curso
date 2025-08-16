@@ -1,5 +1,7 @@
 package com.behnascimento;
 
+import com.behnascimento.carro.Carro2;
+
 import java.util.*;
 
 public class Main {
@@ -47,5 +49,11 @@ public class Main {
 
         // LinkdList - tem mais metodos detalhados de como acessar algo na lista
         LinkedList<String> linked = new LinkedList<>();
+
+        // vendo records
+        Carro2 sandero = new Carro2("sandero", "preto", 2020, "ABC-1234");
+        System.out.println(sandero.ano());
+
+
     }
 }
